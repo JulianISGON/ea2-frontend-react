@@ -79,11 +79,17 @@ npm run preview
 
 ## 6. Integración con backend (EA1)
 
-Este frontend espera la API activa en:
+Este frontend consume la API usando variable de entorno:
 
-http://localhost:3000/api
+VITE_API_BASE_URL
 
-Si cambias host o puerto de la API, actualiza src/api/apiClient.js.
+Ejemplo en local (archivo .env):
+
+VITE_API_BASE_URL=http://localhost:3000/api
+
+En despliegue (Netlify, Vercel, etc.) configura la variable con la URL pública de tu backend, por ejemplo:
+
+VITE_API_BASE_URL=https://tu-backend.onrender.com/api
 
 ## 7. Flujo de datos (resumen)
 
